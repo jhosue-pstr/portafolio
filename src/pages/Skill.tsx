@@ -1,3 +1,5 @@
+import Runas from "../components/Runas/Runas";
+
 function SkillPage() {
   return (
     <div className="app-layout">
@@ -8,6 +10,7 @@ function SkillPage() {
         <p style={{ color: "#ffffff", fontSize: "1.2rem" }}>
           Aquí puedes mostrar tus habilidades, tecnologías y herramientas.
         </p>
+        <Runas titulo="Frontend" url="/skill-rune.png"></Runas>
       </main>
     </div>
   );

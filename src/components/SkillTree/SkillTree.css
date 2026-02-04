@@ -1,0 +1,22 @@
+.skilltree-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.skilltree-modal {
+  width: min(90vw, 900px);
+  height: min(90vh, 600px);
+
+  background: #0e0e0e;
+  border-radius: 16px;
+  padding: 2rem;
+
+  box-shadow:
+    0 0 40px rgba(255, 183, 3, 0.4),
+    0 0 120px rgba(255, 183, 3, 0.15);
+}
