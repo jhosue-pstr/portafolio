@@ -1,15 +1,42 @@
+import { useState } from "react";
 import "./App.css";
 import Titulo from "./Titulo";
-import Redes, { CardBody } from "./components/Redes";
+import Redes, { CardBody } from "./components/Redes/Redes";
+import BotonI from "./components/BotonesI/BotonesI";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import ProyectosPage from "./pages/Proyectos";
+import SkillPage from "./pages/Skill";
+import Puerta from "./components/Puerta/Puerta";
 
-function App() {
+function Home() {
+  const navigate = useNavigate();
+  const [doorState, setDoorState] = useState<"closed" | "opening">("closed");
+
+  const onIngresar = () => {
+    if (doorState === "opening") return;
+    setDoorState("opening");
+  };
+
+  const onDoorDone = () => {
+    // solo navegar cuando ya se disparó la animación
+    if (doorState !== "opening") return;
+    navigate("/skill");
+  };
+
   return (
     <div className="app-layout">
       <header className="app-header">
         <Titulo />
       </header>
 
-      <body></body>
+      <main className="botones-wrapper">
+        <Puerta state={doorState} onDone={onDoorDone} size="lg" />
+        <BotonI
+          Titulo={"Ingresar"}
+          className="boton-ingresar"
+          onClick={onIngresar}
+        />
+      </main>
       <aside className="app-redes">
         <Redes>
           <CardBody Link={""} RedSocial={"Instagram"} />
@@ -21,8 +48,23 @@ function App() {
           />
           <CardBody Link={""} RedSocial={"linkedin"} />
         </Redes>
+        <BotonI
+          Titulo={"Proyectos"}
+          className="boton-proyectos"
+          onClick={() => navigate("/proyectos")}
+        />
       </aside>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/proyectos" element={<ProyectosPage />} />
+      <Route path="/skill" element={<SkillPage />} />
+    </Routes>
   );
 }
 

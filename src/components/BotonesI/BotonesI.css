@@ -1,0 +1,37 @@
+.botones-wrapper {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.boton-base {
+  cursor: pointer;
+}
+
+.boton-ingresar {
+  font-size: 3.5rem !important;
+  padding: 1.4rem 3.4rem !important;
+  position: relative;
+  border-radius: 60px !important;
+}
+
+.boton-proyectos {
+  position: relative;
+  left: 45rem;
+  font-size: 1rem;
+  padding: 0.6rem 1.8rem;
+}
+
+.boton-ingresar a,
+.boton-proyectos a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.boton-ingresar:hover,
+.boton-proyectos:hover {
+  filter: brightness(1.05);
+}
