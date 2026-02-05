@@ -1,4 +1,6 @@
-import Runas from "../components/Runas/Runas";
+import "./Skill.css";
+import Runas from "../../components/Runas/Runas";
+import Box from "../../components/CajaPersonaje/Box";
 
 function SkillPage() {
   return (
@@ -7,10 +9,10 @@ function SkillPage() {
         <h1>Skills</h1>
       </header>
       <main className="botones-wrapper">
-        <p style={{ color: "#ffffff", fontSize: "1.2rem" }}>
-          Aquí puedes mostrar tus habilidades, tecnologías y herramientas.
-        </p>
+        <Runas titulo="Backend" url="/runa-back.png"></Runas>
         <Runas titulo="Bases de datos" url="/runa-db.png"></Runas>
+        <Runas titulo="Frontend" url="/runa-front.png"></Runas>
+        <Box></Box>
       </main>
     </div>
   );

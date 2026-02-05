@@ -4,8 +4,8 @@ import Titulo from "./Titulo";
 import Redes, { CardBody } from "./components/Redes/Redes";
 import BotonI from "./components/BotonesI/BotonesI";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import ProyectosPage from "./pages/Proyectos";
-import SkillPage from "./pages/Skill";
+import ProyectosPage from "./pages/ProyectoPage/Proyectos";
+import SkillPage from "./pages/SkillPage/Skill";
 import Puerta from "./components/Puerta/Puerta";
 
 function Home() {
@@ -18,7 +18,6 @@ function Home() {
   };
 
   const onDoorDone = () => {
-    // solo navegar cuando ya se disparó la animación
     if (doorState !== "opening") return;
     navigate("/skill");
   };

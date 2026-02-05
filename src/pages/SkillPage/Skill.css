@@ -1,0 +1,30 @@
+.botones-wrapper {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botones-wrapper > .Runas:nth-child(1) {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.botones-wrapper > .Runas:nth-child(2) {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.botones-wrapper > .Runas:nth-child(3) {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.botones-wrapper > .Box {
+  position: relative;
+}
