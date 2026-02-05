@@ -1,30 +1,31 @@
 .botones-wrapper {
-  position: relative;
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 80px);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.col {
+  display: grid;
+  gap: 2rem;
+}
+
+.col-left {
+  grid-template-rows: auto auto;
+  align-content: space-between;
+}
+
+.col-center {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
-.botones-wrapper > .Runas:nth-child(1) {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-.botones-wrapper > .Runas:nth-child(2) {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.botones-wrapper > .Runas:nth-child(3) {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-}
-
-.botones-wrapper > .Box {
-  position: relative;
+.col-right {
+  grid-template-rows: auto auto;
+  align-content: start;
 }

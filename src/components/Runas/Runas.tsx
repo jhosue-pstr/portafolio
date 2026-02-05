@@ -15,7 +15,7 @@ function Runas({ url, titulo, children }: RunasProps) {
     <>
       <button className="btn-rune" onClick={() => setOpen(true)}>
         <img src={url} alt={titulo} className="imagen" />
-        {titulo}
+        <span className="titulo-runa">{titulo}</span>
       </button>
 
       <SkillTree open={open} onClose={() => setOpen(false)}>

@@ -9,10 +9,19 @@ function SkillPage() {
         <h1>Skills</h1>
       </header>
       <main className="botones-wrapper">
-        <Runas titulo="Backend" url="/runa-back.png"></Runas>
-        <Runas titulo="Bases de datos" url="/runa-db.png"></Runas>
-        <Runas titulo="Frontend" url="/runa-front.png"></Runas>
-        <Box></Box>
+        <div className="col col-left">
+          <Runas titulo="Backend" url="/runa-back.png" />
+          <Runas titulo="Frontend" url="/runa-front.png" />
+        </div>
+
+        <div className="col col-center">
+          <Box />
+        </div>
+
+        <div className="col col-right">
+          <Runas titulo="Bases de datos" url="/runa-db.png" />
+          <Runas titulo="Bases de datos" url="/runa-db.png" />
+        </div>
       </main>
     </div>
   );

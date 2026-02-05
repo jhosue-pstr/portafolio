@@ -9,8 +9,9 @@ function Box() {
         <ambientLight intensity={1} />
         <pointLight position={[10, 10, 10]} />
         <OrbitControls />
-        <Model scale={2} />
+        <Model scale={1} />
       </Canvas>
+
       <div className="card-body">
         <nav aria-label="Page navigation example">
           <ul className="pagination">
