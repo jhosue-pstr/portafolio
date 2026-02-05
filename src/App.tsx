@@ -36,6 +36,7 @@ function Home() {
           onClick={onIngresar}
         />
       </main>
+
       <aside className="app-redes">
         <Redes>
           <CardBody Link={""} RedSocial={"Instagram"} />
@@ -47,6 +48,7 @@ function Home() {
           />
           <CardBody Link={""} RedSocial={"linkedin"} />
         </Redes>
+
         <BotonI
           Titulo={"Proyectos"}
           className="boton-proyectos"

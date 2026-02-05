@@ -5,12 +5,12 @@ import { Stage, OrbitControls } from "@react-three/drei";
 function Box() {
   return (
     <div className="Box">
-      <Canvas className="card-img-top">
+      {/* <Canvas className="card-img-top">
         <ambientLight intensity={1} />
         <pointLight position={[10, 10, 10]} />
         <OrbitControls />
         <Model scale={1} />
-      </Canvas>
+      </Canvas> */}
 
       <div className="card-body">
         <nav aria-label="Page navigation example">

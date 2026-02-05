@@ -11,6 +11,7 @@ function SkillPage() {
       <main className="botones-wrapper">
         <div className="col col-left">
           <Runas titulo="Backend" url="/runa-back.png" />
+
           <Runas titulo="Frontend" url="/runa-front.png" />
         </div>
 
@@ -20,7 +21,7 @@ function SkillPage() {
 
         <div className="col col-right">
           <Runas titulo="Bases de datos" url="/runa-db.png" />
-          <Runas titulo="Bases de datos" url="/runa-db.png" />
+          <Runas titulo="Bases de datos" url="/runa.png" />
         </div>
       </main>
     </div>
