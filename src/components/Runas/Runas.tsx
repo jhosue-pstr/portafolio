@@ -1,6 +1,6 @@
 import { ReactNode, useState } from "react";
 import SkillTree from "../SkillTree/SkillTree";
-import "./runas.css";
+import "./Runas.css";
 
 interface RunasProps {
   url: string;
