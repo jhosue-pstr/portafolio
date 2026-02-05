@@ -10,7 +10,7 @@ function SkillPage() {
         <p style={{ color: "#ffffff", fontSize: "1.2rem" }}>
           Aquí puedes mostrar tus habilidades, tecnologías y herramientas.
         </p>
-        <Runas titulo="Frontend" url="/skill-rune.png"></Runas>
+        <Runas titulo="Bases de datos" url="/runa-db.png"></Runas>
       </main>
     </div>
   );
