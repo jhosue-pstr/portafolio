@@ -1,15 +1,43 @@
 import { ReactNode, useState } from "react";
-import SkillTree from "../SkillTree/SkillTree";
+import SkillTreeDB from "../SkillTree/SkillTreeDB";
+import SkillTreeFront from "../SkillTree/SkillTreeFront";
+import SkillTreeBack from "../SkillTree/SkillTreeBack";
 import "./Runas.css";
 
 interface RunasProps {
   url: string;
   titulo: string;
   children?: ReactNode;
+  ruta: "db" | "front" | "back";
 }
 
-function Runas({ url, titulo, children }: RunasProps) {
+function Runas({ url, titulo, children, ruta }: RunasProps) {
   const [open, setOpen] = useState(false);
+
+  const renderSkillTree = () => {
+    switch (ruta) {
+      case "db":
+        return (
+          <SkillTreeDB open={open} onClose={() => setOpen(false)}>
+            {children}
+          </SkillTreeDB>
+        );
+      case "front":
+        return (
+          <SkillTreeFront open={open} onClose={() => setOpen(false)}>
+            {children}
+          </SkillTreeFront>
+        );
+      case "back":
+        return (
+          <SkillTreeBack open={open} onClose={() => setOpen(false)}>
+            {children}
+          </SkillTreeBack>
+        );
+      default:
+        return null;
+    }
+  };
 
   return (
     <>
@@ -18,9 +46,7 @@ function Runas({ url, titulo, children }: RunasProps) {
         <span className="titulo-runa">{titulo}</span>
       </button>
 
-      <SkillTree open={open} onClose={() => setOpen(false)}>
-        {children}
-      </SkillTree>
+      {renderSkillTree()}
     </>
   );
 }

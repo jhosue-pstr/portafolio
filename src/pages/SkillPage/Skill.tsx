@@ -10,9 +10,12 @@ function SkillPage() {
       </header>
       <main className="botones-wrapper">
         <div className="col col-left">
-          <Runas titulo="Backend" url="/runa-back.png" />
-
-          <Runas titulo="Frontend" url="/runa-front.png" />
+          <Runas url="/runa-back.png" titulo="Backend" ruta="back">
+            xddd{" "}
+          </Runas>
+          <Runas url="/runa-front.png" titulo="Frontend" ruta="front">
+            contenido front
+          </Runas>
         </div>
 
         <div className="col col-center">
@@ -20,12 +23,20 @@ function SkillPage() {
         </div>
 
         <div className="col col-right">
-          <Runas titulo="Bases de datos" url="/runa-db.png" />
-          <Runas titulo="Bases de datos" url="/runa.png" />
+          <Runas url="/runa-db.png" titulo="Backend" ruta="back">
+            contenido back
+          </Runas>
+          <Runas url="/runa-db.png" titulo="Backend" ruta="back">
+            contenido back
+          </Runas>
         </div>
       </main>
     </div>
   );
 }
+
+<Runas url="/db.png" titulo="Database" ruta="db">
+  contenido db
+</Runas>;
 
 export default SkillPage;

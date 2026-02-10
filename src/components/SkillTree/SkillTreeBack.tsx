@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import "./SkillTree.css";
+import "./SkillTreeBack.css";
 
 interface Props {
   open: boolean;
@@ -7,16 +7,17 @@ interface Props {
   children: ReactNode;
 }
 
-function SkillTree({ open, onClose, children }: Props) {
+function SkillTreeBack({ open, onClose, children }: Props) {
   if (!open) return null;
 
   return (
     <div className="skilltree-overlay" onClick={onClose}>
       <div className="skilltree-modal" onClick={(e) => e.stopPropagation()}>
+        <p>Back</p>
         {children}
       </div>
     </div>
   );
 }
 
-export default SkillTree;
+export default SkillTreeBack;
