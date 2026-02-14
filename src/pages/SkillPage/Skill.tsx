@@ -23,10 +23,10 @@ function SkillPage() {
         </div>
 
         <div className="col col-right">
-          <Runas url="/runa-db.png" titulo="Backend" ruta="back">
+          <Runas url="/runa-db.png" titulo="Backend" ruta="db">
             contenido back
           </Runas>
-          <Runas url="/runa-db.png" titulo="Backend" ruta="back">
+          <Runas url="/runa-db.png" titulo="Backend" ruta="db">
             contenido back
           </Runas>
         </div>

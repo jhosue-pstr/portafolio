@@ -1,13 +1,13 @@
 import { useGLTF } from "@react-three/drei";
 
-useGLTF.preload("");
+useGLTF.preload("/wizzard.glb");
 
 interface Props {
   scale?: number;
 }
 
 const Model = ({ scale = 1 }: Props) => {
-  const { scene } = useGLTF("");
+  const { scene } = useGLTF("/wizzard.glb");
 
   return (
     <group scale={scale}>

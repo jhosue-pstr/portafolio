@@ -6,12 +6,13 @@ import "./Runas.css";
 
 interface RunasProps {
   url: string;
-  titulo: string;
+  titulo?: string;
   children?: ReactNode;
-  ruta: "db" | "front" | "back";
+  ruta?: "db" | "front" | "back";
+  className?: string;
 }
 
-function Runas({ url, titulo, children, ruta }: RunasProps) {
+function Runas({ url, titulo, children, ruta, className }: RunasProps) {
   const [open, setOpen] = useState(false);
 
   const renderSkillTree = () => {
@@ -41,7 +42,10 @@ function Runas({ url, titulo, children, ruta }: RunasProps) {
 
   return (
     <>
-      <button className="btn-rune" onClick={() => setOpen(true)}>
+      <button
+        className={`btn-rune ${className ?? ""}`}
+        onClick={() => setOpen(true)}
+      >
         <img src={url} alt={titulo} className="imagen" />
         <span className="titulo-runa">{titulo}</span>
       </button>
